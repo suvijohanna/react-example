@@ -1,8 +1,11 @@
 import type {MediaItem} from 'hybrid-types/DBTypes';
 import {useState} from 'react';
 
-const MediaRow = (props: {item: MediaItem}) => {
-  const {item} = props;
+const MediaRow = (props: {
+  item: MediaItem;
+  setSelectedItem: (item: MediaItem | undefined) => void;
+}) => {
+  const {item, setSelectedItem} = props;
   const [dummyLikes, setDummyLikes] = useState(0);
 
   return (
@@ -16,6 +19,9 @@ const MediaRow = (props: {item: MediaItem}) => {
       <td>{item.filesize}</td>
       <td>{item.media_type}</td>
       <td>
+        <button onClick={() => setSelectedItem(item)}>View</button>
+      </td>
+      {/* <td>
         Likes {dummyLikes}
         <button
           onClick={() => {
@@ -25,7 +31,7 @@ const MediaRow = (props: {item: MediaItem}) => {
         >
           Add like
         </button>
-      </td>
+      </td> */}
     </tr>
   );
 };
