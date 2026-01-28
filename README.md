@@ -2,6 +2,8 @@
 
 Example React project.
 
+Open [THIS LINK](https://users.metropolia.fi/~suvimyn/2026/jakso3/hybrid/routing/) to view it in the browser.
+
 # React + TypeScript + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
