@@ -1,16 +1,11 @@
 import type {MediaItem} from 'hybrid-types/DBTypes';
+import {useLocation, useNavigate, type NavigateFunction} from 'react-router';
 
-const SingleView = (props: {
-  item: MediaItem | undefined;
-  setSelectedItem: (item: MediaItem | undefined) => void;
-}) => {
-  const {item, setSelectedItem} = props;
+const Single = () => {
+  const {state} = useLocation();
+  const item = state.item as MediaItem;
+  const navigate: NavigateFunction = useNavigate();
   return (
-    // TODO: Add JSX for displaying a mediafile here
-    // - use e.g. a <dialog> element for creating a modal
-    // - use item prop to render the media item details
-    // - use img tag for displaying images
-    // - use video tag for displaying videos
     <dialog open>
       {item && (
         <>
@@ -27,18 +22,11 @@ const SingleView = (props: {
             Uploaded {new Date(item.created_at).toLocaleString('en-fi')} by user
             id {item.user_id}
           </p>
-
-          <button
-            onClick={() => {
-              setSelectedItem(undefined);
-            }}
-          >
-            Close
-          </button>
+          <button onClick={() => navigate(-1)}>Go back</button>
         </>
       )}
     </dialog>
   );
 };
 
-export default SingleView;
+export default Single;
