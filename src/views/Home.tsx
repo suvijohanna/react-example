@@ -1,5 +1,5 @@
 import {
-  UserWithNoPassword,
+  type UserWithNoPassword,
   type MediaItem,
   type MediaItemWithOwner,
 } from 'hybrid-types/DBTypes';
