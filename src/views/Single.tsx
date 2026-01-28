@@ -4,7 +4,9 @@ import {useLocation, useNavigate, type NavigateFunction} from 'react-router';
 const Single = () => {
   const {state} = useLocation();
   const item = state.item as MediaItem;
+
   const navigate: NavigateFunction = useNavigate();
+
   return (
     <dialog open>
       {item && (

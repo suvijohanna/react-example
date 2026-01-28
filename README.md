@@ -2,7 +2,7 @@
 
 Example React project.
 
-Open [THIS LINK](https://users.metropolia.fi/~suvimyn/2026/jakso3/hybrid/hooks/) to view it in the browser.
+Open [THIS LINK](https://users.metropolia.fi/~suvimyn/2026/jakso3/hybrid/custom-hooks/) to view it in the browser.
 
 # React + TypeScript + Vite
 
