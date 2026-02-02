@@ -1,3 +1,4 @@
 import type {User} from 'hybrid-types/DBTypes';
-type Credentials = Pick<User, 'username' | 'password'>;
-export type {Credentials};
+
+export type Credentials = Pick<User, 'username' | 'password'>;
+export type RegisterCredentials = Pick<User, 'username' | 'password' | 'email'>;
