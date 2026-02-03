@@ -6,7 +6,7 @@ import type {
 import {useEffect, useState} from 'react';
 import {fetchData} from '../utils/fetch-data';
 import type {Credentials, RegisterCredentials} from '../types/LocalTypes';
-import {LoginResponse, UserResponse} from 'hybrid-types/MessageTypes';
+import type {LoginResponse, UserResponse} from 'hybrid-types/MessageTypes';
 
 const useMedia = () => {
   const [mediaArray, setMediaArray] = useState<MediaItemWithOwner[]>([]);

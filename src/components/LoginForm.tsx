@@ -15,6 +15,7 @@ const LoginForm = () => {
   const doLogin = async () => {
     // console.log(inputs);
     // TODO: add login functionalities here
+    // eslint-disable-next-line react-hooks/immutability
     const result: LoginResponse = await postLogin(inputs as Credentials);
     console.log('doLogin result', result);
     localStorage.setItem('token', result.token);
