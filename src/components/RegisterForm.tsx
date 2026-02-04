@@ -12,7 +12,8 @@ const RegisterForm = () => {
   };
 
   const doRegister = async () => {
-    console.log(inputs);
+    // console.log(inputs);
+    // eslint-disable-next-line react-hooks/immutability
     const result = await postRegister(inputs as RegisterCredentials);
     console.log('doRegister result', result);
   };
